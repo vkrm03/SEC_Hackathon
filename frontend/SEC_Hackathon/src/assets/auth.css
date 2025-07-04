@@ -1,0 +1,89 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  background: linear-gradient(to bottom right, #f1f4f8, #dfe9f3);
+  padding: 20px;
+}
+
+.auth-form {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.auth-form h2 {
+  margin-bottom: 30px;
+  color: #00b894;
+  font-size: 1.9rem;
+  letter-spacing: 0.5px;
+}
+
+.auth-form input {
+  width: 90%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  background: #f8f9fb;
+  border: 1.5px solid #e1e4ea;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #2c3e50;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.auth-form input::placeholder {
+  color: #a2aab4;
+}
+
+.auth-form input:focus {
+  background-color: #fff;
+  border-color: #00b894;
+  box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.2);
+}
+
+/* 🟩 Submit Button */
+.auth-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-form button:hover {
+  background-color: #019875;
+  transform: scale(1.02);
+}
+
+/* Switch Links */
+.switch-msg {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.switch-msg a {
+  color: #00b894;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.switch-msg a:hover {
+  text-decoration: underline;
+  color: #019875;
+}

@@ -1,0 +1,111 @@
+.dashboard-container {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.card {
+  flex: 1;
+  margin: 0 10px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.purple {
+  background-color: #7e57c2;
+}
+.orange {
+  background-color: #fb8c00;
+}
+.red {
+  background-color: #e53935;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.text p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.text h2 {
+  margin: 0;
+}
+
+.bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.transactions-card, .chart-card {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  min-width: 280px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.transactions-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.transactions-card .plus {
+  color: green;
+}
+
+.chart-card canvas {
+  margin-top: 1rem;
+}
+
+.legend {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.dot.purple { background-color: #7e57c2; }
+.dot.red { background-color: #e53935; }
+.dot.orange { background-color: #fb8c00; }

@@ -1,0 +1,253 @@
+/* 🌟 Base Layout */
+.home-container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+/* 🧲 Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.text-content {
+  flex: 1 1 400px;
+}
+
+.text-content h1 {
+  font-size: 3.2rem;
+  color: #2C3E50;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  color: #5d6d7e;
+  margin-bottom: 30px;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.shop-btn {
+  background-color: #00b894;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #019875;
+  cursor: pointer;
+}
+
+.image-content {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 💸 Features Section */
+.features {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  color: #2C3E50;
+  margin-bottom: 40px;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+.feature {
+  background-color: #f1f4f8;
+  padding: 25px;
+  border-radius: 18px;
+  width: 330px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  color: #00b894;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 📨 Connect Section */
+.bookaroo-connect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to right, #f1f4f8, #dfe9f3);
+  padding: 50px 40px;
+  border-radius: 20px;
+  margin-top: 80px;
+  gap: 40px;
+}
+
+.connect-left,
+.connect-right {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.connect-left h3,
+.connect-right h3 {
+  font-size: 1.8rem;
+  color: #2C3E50;
+  margin-bottom: 15px;
+}
+
+.connect-left p,
+.connect-right p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #5d6d7e;
+  line-height: 1.6;
+}
+
+.connect-left form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.connect-left input[type="email"] {
+  padding: 12px 16px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.connect-left button,
+.connect-right .join-btn {
+  padding: 12px 24px;
+  background-color: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.connect-left button:hover,
+.connect-right .join-btn:hover {
+  background-color: #019875;
+}
+
+/* 🦶 Footer */
+.footer {
+  color: #2c3e50;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .text-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .text-content p {
+    font-size: 1.1rem;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+  }
+
+  .connect-left h3,
+  .connect-right h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bookaroo-connect {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .connect-left,
+  .connect-right {
+    text-align: center;
+  }
+
+  .connect-left form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connect-left input[type="email"],
+  .connect-left button,
+  .connect-right .join-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .features h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature {
+    width: 90%;
+  }
+}

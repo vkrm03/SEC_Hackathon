@@ -13,19 +13,16 @@ const JWT_SECRET = 'Expense_Track';
 app.use(cors());
 app.use(express.json());
 
-// MongoDB Connect
 mongoose.connect('mongodb://localhost:27017/ExpenseEase', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("MongoDB Error:", err));
 
-// Root Route
 app.get('/', (req, res) => {
   res.send('🚀 ExpenseEase Backend is Running...');
 });
 
-// Register Route
 app.post('/api/register', async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -62,7 +59,6 @@ app.post('/api/expenses', async (req, res) => {
   }
 });
 
-// Get expenses for a user
 app.get('/api/expenses/:userId', async (req, res) => {
   const { userId } = req.params;
 
@@ -75,8 +71,6 @@ app.get('/api/expenses/:userId', async (req, res) => {
   }
 });
 
-
-// Login Route with JWT
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -87,7 +81,6 @@ app.post('/api/login', async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ message: 'Invalid credentials!' });
 
-    // Create JWT Token
     const token = jwt.sign(
       { userId: user._id, email: user.email, name: user.name },
       JWT_SECRET,
@@ -105,7 +98,6 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
-// Start Server
 app.listen(PORT, () => {
   console.log(`Server running at: http://localhost:${PORT}`);
 });
